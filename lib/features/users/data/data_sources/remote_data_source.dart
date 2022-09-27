@@ -71,24 +71,4 @@ class RemoteDataSourceUserImpl implements RemoteDataSourceUser {
       throw ServerException();
     }
   }
-
-//   @override
-//   Future<Unit> deleteUser(UserModel userModel) async {
-//      final body = {
-//       'Username': userModel.username,
-//       'ImageAsBase64': userModel.imageAsBase64,
-//       'Email': userModel.email,
-//       'IntrestId': userModel.interestId,
-//     };
-
-//     final response = await dio.post(
-//       'https://noteapi.popssolutions.net/notes/insert',
-//       data: body,
-//     );
-//     if (response.statusCode == 200) {
-//       return Future.value(unit);
-//     } else {
-//       throw ServerException();
-//     }
-//   }
 }

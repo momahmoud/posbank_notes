@@ -22,8 +22,6 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import 'core/network/network_info.dart';
 
-import 'package:http/http.dart' as http;
-
 import 'features/notes/data/data_sources/local_data_source.dart';
 import 'features/notes/data/data_sources/remote_data_source.dart';
 
@@ -87,6 +85,6 @@ Future<void> init() async {
   sl.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
   sl.registerLazySingleton<InternetConnectionChecker>(
       () => InternetConnectionChecker());
-  sl.registerLazySingleton(() => http.Client());
+
   sl.registerLazySingleton(() => Dio());
 }
